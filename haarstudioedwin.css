@@ -106,7 +106,7 @@ header {
     justify-content: center;
     text-align: center;
     padding: 5rem 1rem;
-    background: url('../fotos/haarstudioedwin.jpg') center/cover no-repeat;
+    background: url('haarstudioedwin.jpg') center/cover no-repeat;
     color: white;
 }
 
@@ -452,4 +452,5 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
