@@ -1,0 +1,437 @@
+/* =========================
+   Variabelen
+========================= */
+:root {
+    --primary-color: #d81b60;
+    --secondary-color: #f06292;
+    --bg-light: #fffafc;
+    --bg-header: #fce4ec;
+    --text-color: #333;
+    --text-muted: #555;
+    --radius: 8px;
+    --radius-round: 50px;
+    --transition: 0.3s;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================
+   Basis
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background: var(--bg-light);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    background-color: var(--bg-header);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--secondary-color);
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+}
+
+.nav-menu a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.btn-appointment {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-round);
+    font-weight: bold;
+}
+
+.btn-appointment:hover {
+    background-color: #ad1457;
+}
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Hamburger animatie */
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================
+   Hero
+========================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 1rem;
+    background: url('../img/haarstudioedwin.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.hero h1,
+.hero p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+}
+
+/* =========================
+   Services
+========================= */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 4rem 1rem;
+    background-color: #fff;
+}
+
+.service-card {
+    background-color: var(--bg-header);
+    padding: 2rem;
+    border-radius: 1.25rem;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.9375rem 1.875rem rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* =========================
+   Pricing
+========================= */
+.pricing {
+    padding: 4rem 1rem;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.pricing h2 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 200px;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(216, 27, 96, 0.1);
+}
+
+.pricing-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem;
+}
+
+.pricing-card .price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+/* =========================
+   Openingstijden
+========================= */
+.opening-hours {
+    padding: 4rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.opening-hours h2 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.hours-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.hours-table th {
+    background-color: var(--bg-header);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.hours-table td:first-child {
+    color: var(--primary-color);
+    width: 25%;
+}
+
+.hours-table td {
+    color: var(--text-muted);
+}
+
+/* =========================
+   Afspraak
+========================= */
+.appointment {
+    background-color: #f8bbd0;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    border-radius: 1.25rem;
+    margin: 4rem auto;
+    max-width: 700px;
+}
+
+.appointment h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.appointment p {
+    font-size: 1.125rem;
+    margin-bottom: 1.875rem;
+}
+
+.appointment a {
+    background-color: var(--primary-color);
+    padding: 0.9375rem 2.1875rem;
+    border-radius: var(--radius-round);
+    font-weight: bold;
+    color: white;
+}
+
+.appointment a:hover {
+    background-color: #ad1457;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    background-color: var(--bg-header);
+    border-top: 3px solid var(--secondary-color);
+    padding: 3rem 1rem;
+    color: var(--primary-color);
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    color: #ad1457;
+    font-size: 0.875rem;
+}
+
+.footer-col h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem;
+}
+
+.footer-col p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    color: var(--primary-color);
+}
+
+.social-icons a:hover {
+    color: #ad1457;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #f8bbd0;
+    color: #ad1457;
+    font-size: 0.875rem;
+}
+
+/* =========================
+   Animaties
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 992px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .pricing-grid { gap: 0.75rem; }
+}
+
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 1rem; }
+
+    .services { flex-direction: column; align-items: center; }
+
+    .hero h1 { font-size: 1.75rem; }
+    .hero p { font-size: 0.9375rem; }
+
+    .menu-toggle { display: flex; }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(255, 244, 252, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        display: none;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        animation: fadeIn 0.3s ease forwards;
+    }
+}
+
+@media (max-width: 480px) {
+    header { padding: 1rem; }
+    .hero { padding: 3rem 1rem; }
+    .appointment { padding: 2.5rem 1rem; max-width: 90%; }
+    .services, .pricing-grid { gap: 1rem; }
+    .pricing-card { max-width: 100%; }
+}
