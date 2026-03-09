@@ -162,8 +162,8 @@ nav a:hover::after {
   margin-left: 26px;
   padding: 8px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(127, 212, 140, 0.6);
-  background: radial-gradient(circle at top left, rgba(127, 212, 140, 0.18), rgba(5, 6, 8, 0.9));
+  border: 1px solid var(--accent-soft);
+  background: radial-gradient(circle at top left, var(--bg), rgba(5, 6, 8, 0.9));
   color: var(--accent-soft);
   font-size: 13px;
   text-decoration: none;
@@ -181,7 +181,7 @@ nav a:hover::after {
 .nav-cta:hover {
   transform: translateY(-2px) translateX(1px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
-  background: radial-gradient(circle at top left, rgba(127, 212, 140, 0.32), rgba(5, 6, 8, 0.95));
+  background: radial-gradient(circle at top left, var(--accent-soft), rgba(5, 6, 8, 0.95));
 }
 
 /* ---------- Hero ---------- */
@@ -207,7 +207,6 @@ nav a:hover::after {
   padding: 4px 10px 4px 4px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(120deg, rgba(127, 212, 140, 0.18), rgba(5, 6, 8, 0.9));
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
   margin-bottom: 18px;
 }
@@ -216,8 +215,8 @@ nav a:hover::after {
   width: 22px;
   height: 22px;
   border-radius: 999px;
-  background: radial-gradient(circle, #7fd48c 0, #1b2a1f 55%, #050608 100%);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 0 18px rgba(127, 212, 140, 0.7);
+  background: radial-gradient(circle, var(--accent-soft) 0, var(--bg) 55%, #050608 100%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 0 18px var(--accent);
 }
 
 .hero-badge span {
@@ -266,7 +265,7 @@ nav a:hover::after {
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: radial-gradient(circle, #7fd48c 0, #1b2a1f 60%);
+  background: radial-gradient(circle, var(--accent) 0, var(--bg) 60%);
   box-shadow: 0 0 10px rgba(127, 212, 140, 0.9);
 }
 
@@ -302,7 +301,7 @@ nav a:hover::after {
 .btn-ghost {
   padding: 11px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--accent-soft);
   background: rgba(5, 6, 8, 0.7);
   color: var(--muted);
   font-size: 13px;
@@ -314,7 +313,6 @@ nav a:hover::after {
 }
 
 .btn-ghost:hover {
-  background: rgba(15, 25, 20, 0.95);
   color: var(--text);
   transform: translateY(-1px);
 }
@@ -335,7 +333,6 @@ nav a:hover::after {
 .hero-card {
   position: relative;
   border-radius: var(--radius-xl);
-  background: radial-gradient(circle at top left, rgba(127, 212, 140, 0.18), rgba(5, 6, 8, 0.96));
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
@@ -516,7 +513,6 @@ section {
   content: "";
   position: absolute;
   inset: -40%;
-  background: conic-gradient(from 210deg, rgba(127, 212, 140, 0.15), transparent, rgba(181, 240, 193, 0.18), transparent);
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
@@ -592,13 +588,13 @@ section {
   content: "";
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at top, rgba(127, 212, 140, 0.18), transparent 55%);
+  background: radial-gradient(circle at top, var(--accent-soft), transparent 55%);
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
 
 .service-card:hover {
-  border-color: rgba(127, 212, 140, 0.6);
+  border-color: var(--accent-soft);
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.9);
 }
 
